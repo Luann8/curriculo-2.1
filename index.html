@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,18 +9,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H4ck3r 3tic4l Lu4nn</title>
     <style>
-        body {
-            margin: 0;
-            background-color: #000;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            position: relative;
+      body {
+        margin: 20px; /* or any other value you prefer */
+        background-color: #222;
+        color: #00ff00;
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        position: relative;
+        max-width: 100%;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        body.dark-theme {
+            background-color: #282c34;
+            color: #abb2bf;
+        }
+
+        h2.dark-theme {
+            color: #022f81;
         }
 
         header {
@@ -46,11 +58,11 @@
 
         .apresentacao__conteudo {
             text-align: center;
-            padding: 40px;
+            padding: 20px;
             border-radius: 10px;
-            max-width: 800px;
+            max-width: 90%;
             margin: 0 auto;
-            background-color: #000;
+            background-color: #222;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -100,13 +112,13 @@
         }
 
         .section {
-            margin-top: 50px;
+            margin-top: 30px;
             text-align: left;
-            max-width: 800px;
+            max-width: 90%;
         }
 
         h2 {
-            color: #00ff00;
+            color: #fbff00;
             font-size: 2em;
             margin-bottom: 20px;
         }
@@ -121,8 +133,7 @@
         }
 
         footer {
-            background-color: #1a1a1a;
-            color: #00b300;
+
             padding: 20px;
             text-align: center;
             width: 100%;
@@ -130,6 +141,32 @@
 
         footer p {
             margin: 5px 0;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #00ff00;
+            background: none;
+            border: none;
+            transition: color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            color: #00cc00;
+        }
+
+        @media screen and (max-width: 768px) {
+            .apresentacao__conteudo {
+                padding: 15px;
+            }
+
+            .section {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -140,19 +177,26 @@
     
     </header>
 
-    <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">I'4m <strong class="titulo-destaque">Lu4nn P3r3ir4 M3nd3s</strong></h1>
+    <main>
+            
+      <p>*****************************************</p>
+      
+      <h1 class="apresentacao__conteudo__titulo">I'4m <strong class="titulo-destaque">Lu4nn P3r3ir4 M3nd3s</strong></h1>
             <p class="apresentacao__conteudo__texto">
-                Undergraduate student in software engineering / DevOps / cybersecurity / data science.
+                Undergraduate student in software engineering, 
             </p>
-            <div class="apresentacao__links">
-                <h2 class="apresentacao__links__subtitulo">4c3ss my links</h2>
-                <a class="apresentacao__links__navegacao" href="https://luann8.github.io/Links-Personal/">Cl1ck h3r3</a>
-            </div>
+            <p>DevOps, cybersecurity, and data science.
+            </p>
             <img class="apresentacao__imagem" src="https://github.com/Luann8/curriculo-2.1/blob/main/133384636.jpg?raw=true" alt="Photo of Joana Santos programming">
-        </section>
-<ol>
+            <div class="apresentacao__links">
+                <h2 class="apresentacao__links__subtitulo">Access my links</h2>
+                <a class="apresentacao__links__navegacao" href="https://luann8.github.io/Links-Personal/">Click here</a>
+            </div>
+        
+            <p>*****************************************</p>
+
+          </section>
+
         <section class="section">
             <h2>Experience</h2>
             <ul>
@@ -194,9 +238,22 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Lu4nn P3r3ir4 M3nd3s. All rights reserved.</p>
-        <p>Contact: luannpmendes@gmail.com</p>
-    </footer>
+        
+      <p>*****************************************</p>
+
+      <p>&copy; 2024 Lu4nn P3r3ir4 M3nd3s.</p>
+      <p>Contact: luannpmendes@gmail.com</p>
+    
+      <p>*****************************************</p>
+
+      </footer>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
 </body>
 
 </html>

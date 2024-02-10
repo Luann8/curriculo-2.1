@@ -1,251 +1,191 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Luann8/Chat-Luann/main/OIG.ico?token=GHSAT0AAAAAACJ26QCJFKT2HSOJUDO6X3AKZKKQP7Q" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H4ck3r 3tic4l Lu4nn</title>
+    <title>Hacker Curriculum</title>
     <style>
-      body {
-        margin: 20px; /* or any other value you prefer */
-        background-color: #222;
-        color: #00ff00;
-        font-family: 'Courier New', Courier, monospace;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        text-align: center;
-        position: relative;
-        max-width: 100%;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-        body.dark-theme {
-            background-color: #282c34;
-            color: #abb2bf;
-        }
-
-        h2.dark-theme {
-            color: #022f81;
-        }
-
-        header {
-            margin-bottom: 20px;
-        }
-
-        .cabecalho__menu {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
-
-        .cabecalho__menu__link {
-            color: #00ff00;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-
-        .cabecalho__menu__link:hover {
-            color: #00cc00;
-        }
-
-        .apresentacao__conteudo {
-            text-align: center;
+        body {
+            background-color: #000;
+            color: #0F0;
+            font-family: 'Courier New', Courier, monospace;
             padding: 20px;
-            border-radius: 10px;
-            max-width: 90%;
-            margin: 0 auto;
-            background-color: #222;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            overflow-y: auto;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .apresentacao__conteudo__titulo {
-            color: #00ff00;
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-
-        .apresentacao__conteudo__texto {
-            color: #00ff00;
-            font-size: 1.2em;
-            line-height: 1.6;
+        h1, h2 {
+            text-align: center;
+            font-size: 2em;
             margin-bottom: 30px;
         }
 
-        .apresentacao__links {
-            margin-top: 20px;
-        }
-
-        .apresentacao__links__subtitulo {
-            color: #00ff00;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .apresentacao__links__navegacao {
-            color: #00ff00;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .apresentacao__links__navegacao:hover {
-            color: #00cc00;
-        }
-
-        .apresentacao__imagem {
-            border: 2px solid #00ff00;
-            border-radius: 50%;
-            margin-top: 20px;
-            max-width: 200px;
-        }
-
-        .titulo-destaque {
-            text-decoration: underline;
-        }
-
-        .section {
-            margin-top: 30px;
-            text-align: left;
-            max-width: 90%;
+        h1 {
+            animation: glitch 2s infinite;
         }
 
         h2 {
-            color: #fbff00;
-            font-size: 2em;
-            margin-bottom: 20px;
+            animation: glitch 2s infinite reverse;
+        }
+
+        @keyframes glitch {
+            0%, 100% {
+                transform: none;
+            }
+            20% {
+                transform: translate(-2px, -2px) skew(0deg);
+            }
+            40% {
+                transform: translate(2px, 2px) skew(0deg);
+            }
+            60% {
+                transform: translate(-2px, 2px) skew(2deg);
+            }
+            80% {
+                transform: translate(2px, -2px) skew(-2deg);
+            }
+        }
+
+        .content {
+            margin-bottom: 30px;
+            text-align: center;
         }
 
         ul {
             list-style-type: none;
-            padding: 0;
+            padding-left: 0;
+            margin-top: 0;
+            text-align: left;
         }
 
         li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-      
+        img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            display: block;
+            margin: 0 auto 20px;
+        }
 
-      footer p {
-          margin: 10px 0; /* Adjust the margin for paragraphs inside the footer */
-      }
-
-        footer p {
-            margin: 5px 0;
+        footer {
+            text-align: center;
+            margin-top: 50px;
         }
 
         .theme-toggle {
+            padding: 10px 20px;
+            background-color: #0F0;
+            color: #000;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
             position: fixed;
             bottom: 20px;
             right: 20px;
-            cursor: pointer;
-            font-size: 1.2em;
-            color: #00ff00;
-            background: none;
-            border: none;
-            transition: color 0.3s;
         }
 
         .theme-toggle:hover {
-            color: #00cc00;
+            background-color: #00cc00;
         }
 
-        @media screen and (max-width: 768px) {
-            .apresentacao__conteudo {
-                padding: 15px;
-            }
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #222;
+            color: rgb(241, 177, 0);
+        }
 
-            .section {
-                margin-top: 20px;
-            }
+        body.dark-theme img {
+            box-shadow: 0 0 10px rgb(241, 177, 0);
+        }
+
+        body.dark-theme .theme-toggle {
+            background-color: rgb(241, 177, 0);
+            color: #000;
+        }
+
+        body.dark-theme .theme-toggle:hover {
+            background-color: rgb(173, 127, 0);
         }
     </style>
 </head>
 
 <body>
+    <h1>Hacker Curriculum</h1>
 
-    <header>
-    
-    </header>
+    <div class="content">
+        <h2>Introduction</h2>
+        <p>Hello! My name is <strong class="titulo-destaque">Lu4nn P3r3ir4 M3nd3s</strong>. I am an undergraduate student in Software Engineering, focusing on DevOps, cybersecurity, and data science.</p>
+        <img src="https://github.com/Luann8/curriculo-2.1/blob/main/133384636.jpg?raw=true" alt="Photo of Joana Santos programming">
+        <div>
+            <h3>My links</h3>
+            <a href="https://luann8.github.io/Links-Personal/">Click here</a>
+        </div>
+    </div>
 
-    <main>
-            
-      <p>*****************************************</p>
-      
-      <h1 class="apresentacao__conteudo__titulo">I'4m <strong class="titulo-destaque">Lu4nn P3r3ir4 M3nd3s</strong></h1>
-            <p class="apresentacao__conteudo__texto">
-                Undergraduate student in software engineering, 
-            </p>
-            <p>DevOps, cybersecurity, and data science.
-            </p>
-            <img class="apresentacao__imagem" src="https://github.com/Luann8/curriculo-2.1/blob/main/133384636.jpg?raw=true" alt="Photo of Joana Santos programming">
-            <div class="apresentacao__links">
-                <h2 class="apresentacao__links__subtitulo">Access my links</h2>
-                <a class="apresentacao__links__navegacao" href="https://luann8.github.io/Links-Personal/">Click here</a>
-            </div>
-        
-            <p>*****************************************</p>
+    <div class="content">
+        <h2>Experience</h2>
+        <ul>
+            <li>Logistics support internship at Stage DMS</li>
+            <li>Hackathon DMS 23.1</li>
+            <li>Programming tutor and website monitor at UNIVassouras</li>
+        </ul>
+    </div>
 
-          </section>
+    <div class="content">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Backend Development and APIs:</strong><br>
+                Advanced experience in Django, Python, and Node.js, focusing on creating efficient and scalable APIs.</li>
+            <li><strong>API Security:</strong><br>
+                Solid knowledge of security practices specific to APIs, ensuring proper protection of transmitted data and system integrity.</li>
+            <li><strong>Database:</strong><br>
+                Experience in PostgreSQL to create efficient database schemas, optimizing queries to support fast and effective operations through the API.</li>
+            <li><strong>API Versioning and Documentation:</strong><br>
+                Experience in API versioning strategies and creating clear and comprehensive documentation, facilitating efficient integration and collaboration between teams.</li>
+            <li><strong>Data Science:</strong><br>
+                Proficient in data manipulation, statistical analysis, and building predictive models.</li>
+            <li><strong>Handling Complex and Ancient Numbers:</strong><br>
+                Ability to deal with complex and ancient numbers in scientific and mathematical contexts.</li>
+            <li><strong>Code Debugging:</strong><br>
+                Solid experience in identifying and fixing issues in code, ensuring high quality and efficiency.</li>
+            <li><strong>Agile Methodologies:</strong><br>
+                Application of best practices in versioning and management based on agile methodologies.</li>
+        </ul>
+    </div>
 
-        <section class="section">
-            <h2>Experience</h2>
-            <ul>
-                <li>Support Stage DMS logistic</li>
-                <li>DMS Hackathon 23.1</li>
-                <li>Programming Tutor and Web Sites Monitor (UNIVassouras)</li>
-            </ul>
-        </section>
+    <div class="content">
+        <h2>Courses</h2>
+        <ul>
+            <li>Advanced Big Data and Data Mining</li>
+            <li>Advanced Python</li>
+            <li>AWS Cloud Certification for IoT</li>
+            <li>Database Normalization</li>
+            <li>Fundamentals of Cybersecurity</li>
+            <li>Principles of Cybersecurity</li>
+            <li>Understanding Client-Server Communication</li>
+            <li>Introduction to Specialized Machine Learning Training</li>
+            <li>Supplementary Materials: Pentesting and Vulnerability Search</li>
+            <li>Introduction to Google Cloud Platform</li>
+            <li>Artificial Intelligence Models for IoT</li>
+        </ul>
+    </div>
 
-        <section class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Back-End Development and API: Advanced experience in Django, Python, and Node.js, specializing in creating efficient and scalable APIs.</li>
-                <li>API Security: Solid knowledge of security practices specific to APIs, ensuring proper protection of transmitted data and maintaining system integrity.</li>
-                <li>Database: Expertise in PostgreSQL to create efficient database schemas, optimizing queries to support fast and effective operations through the API.</li>
-                <li>API Versioning and Documentation: Experience in API versioning strategies and creating clear and comprehensive documentation, facilitating efficient integration and collaboration between teams.</li>
-                <li>Data Science: Proficient in data manipulation, statistical analysis, and building predictive models.</li>
-                <li>Complex and Outdated Number Handling: Ability to handle complex and outdated numbers in scientific and mathematical contexts.</li>
-                <li>Code Debugging: Solid experience in identifying and fixing issues in code, ensuring high quality and efficiency.</li>
-                <li>Agile Methodologies: Application of best practices in versioning and management based on agile methodologies.</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Courses</h2>
-            <ul>
-                <li>Advanced Big Data and Data Mining</li>
-                <li>Advanced Python</li>
-                <li>AWS Cloud Certification for IoT</li>
-                <li>Database Normalization</li>
-                <li>Fundamentals of Cybersecurity</li>
-                <li>Principles of Cybersecurity</li>
-                <li>Understanding Client x Server Communication</li>
-                <li>Introduction to Machine Learning Specialist Training</li>
-                <li>Supplementary Materials: Pentest and Vulnerability Search</li>
-                <li>Introduction to Google Cloud Platform</li>
-                <li>Artificial Intelligence Models for IoT</li>
-            </ul>
-        </section>
-    </main>
     <footer>
-        
-      <p>*****************************************</p>
+        <p>*****************************************</p>
+        <p>&copy; 2024 Lu4nn P3r3ir4 M3nd3s.</p>
+        <p>Contact: luannpmendes@gmail.com</p>
+        <p>*****************************************</p>
+    </footer>
 
-      <p>&copy; 2024 Lu4nn P3r3ir4 M3nd3s.</p>
-      <p>Contact: luannpmendes@gmail.com</p>
-    
-      <p>*****************************************</p>
-
-      </footer>
     <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
     <script>

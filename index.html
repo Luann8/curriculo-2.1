@@ -17,22 +17,25 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             text-align: center;
-            font-size: 2em;
             margin-bottom: 30px;
         }
 
         h1 {
+            font-size: 2em;
             animation: glitch 2s infinite;
         }
 
         h2 {
+            font-size: 1.5em;
             animation: glitch 2s infinite reverse;
         }
 
         @keyframes glitch {
-            0%, 100% {
+            0%,
+            100% {
                 transform: none;
             }
             20% {
@@ -51,7 +54,7 @@
 
         .content {
             margin-bottom: 30px;
-            text-align: center;
+            text-align: left;
         }
 
         ul {
@@ -115,6 +118,13 @@
         body.dark-theme .theme-toggle:hover {
             background-color: rgb(173, 127, 0);
         }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
     </style>
 </head>
 
@@ -123,7 +133,6 @@
 
     <div class="content">
         <p>Hello! My name is <strong class="titulo-destaque">Lu4nn P3r3ir4 M3nd3s</strong>. I am an undergraduate student in Software Engineering, focusing on DevOps, cybersecurity, and data science.</p>
-        <img src="https://github.com/Luann8/curriculo-2.1/blob/main/133384636.jpg?raw=true" alt="Photo of Joana Santos programming">
         <div>
             <h3>My links</h3>
             <a href="https://luann8.github.io/Links-Personal/">Click here</a>
@@ -131,7 +140,7 @@
     </div>
 
     <div class="content">
-        <h2>Experience</h2>
+        <h1>Experience</h1>
         <ul>
             <li>Hackathon DMS 23.1</li>
             <li>Programming tutor and website monitor at UNIVassouras</li>
@@ -139,53 +148,85 @@
     </div>
 
     <div class="content">
-        <h2>Skills</h2>
+        <h1>Skills</h1>
+        <h2>Backend Hacker and API Master</h2>
         <ul>
-            <li><strong>Backend Development and APIs:</strong><br>
-                Advanced experience in Django, Python, and Node.js, focusing on creating efficient and scalable APIs.</li>
-            <li><strong>API Security:</strong><br>
-                Solid knowledge of security practices specific to APIs, ensuring proper protection of transmitted data and system integrity.</li>
-            <li><strong>Database:</strong><br>
-                Experience in PostgreSQL to create efficient database schemas, optimizing queries to support fast and effective operations through the API.</li>
-            <li><strong>API Versioning and Documentation:</strong><br>
-                Experience in API versioning strategies and creating clear and comprehensive documentation, facilitating efficient integration and collaboration between teams.</li>
-            <li><strong>Data Science:</strong><br>
-                Proficient in data manipulation, statistical analysis, and building predictive models.</li>
-            <li><strong>Handling Complex and Ancient Numbers:</strong><br>
-                Ability to deal with complex and ancient numbers in scientific and mathematical contexts.</li>
-            <li><strong>Code Debugging:</strong><br>
-                Solid experience in identifying and fixing issues in code, ensuring high quality and efficiency.</li>
-            <li><strong>Agile Methodologies:</strong><br>
-                Application of best practices in versioning and management based on agile methodologies.</li>
+            <li>Advanced mastery in API manipulation, specializing in identifying and exploiting vulnerabilities aiming at unauthorized access or data manipulation.</li>
+            <li>Deep understanding of security practices in APIs, focusing on identifying and fixing authentication, authorization, and input validation flaws.</li>
+            <li>Experience in identifying and exploiting SQL injection, XSS (Cross-Site Scripting), and CSRF (Cross-Site Request Forgery) vulnerabilities to compromise systems and gain privileged access.</li>
         </ul>
+    
+        <h2>Database Master</h2>
+        <ul>
+            <li>SQL specialist with advanced skills in creating secure and efficient database schemas.</li>
+            <li>Proficient in identifying and exploiting security vulnerabilities in database systems, including SQL injection attacks and denial of service.</li>
+            <li>Experience in manipulating large volumes of data to extract sensitive information or perform malicious operations.</li>
+        </ul>
+    
+        <h2>Data Science Ninja</h2>
+        <ul>
+            <li>Exceptional ability to manipulate data to obtain malicious insights or create machine learning models with dubious goals.</li>
+            <li>Expert in reverse engineering techniques to understand and manipulate machine learning algorithms, aiming to sabotage detection systems or bypass security controls.</li>
+            <li>Advanced knowledge in data anonymization and obfuscation techniques to avoid detection during malicious activities.</li>
+        </ul>
+    
+        <h2>IOT and Systems Expert</h2>
+    <ul>
+        <li>Experience in identifying and exploiting vulnerabilities in IoT devices, including security cameras, smart thermostats, and connected home devices.</li>
+        <li>Ability to invade and take control of IoT devices using brute force techniques, dictionary attacks, and exploiting security flaws.</li>
+        <li>Specialist in MAC address spoofing, DNS poisoning, and hijacking communications between devices and cloud servers.</li>
+    </ul>
+
+    <h2>Corporate Systems Intrusion</h2>
+    <ul>
+        <li>Experience in infiltrating corporate networks and infrastructure systems, exploiting configuration flaws, weak passwords, and software vulnerabilities.</li>
+        <li>Ability to escalate privileges on compromised systems to gain full control over organization resources and data.</li>
+        <li>Knowledge in persistence and camouflage techniques to remain hidden in compromised systems for extended periods.</li>
+    </ul>
+
+    <h2>Communication Protocols Exploitation</h2>
+    <ul>
+        <li>Deep understanding of communication protocols used in IoT systems and corporate networks, enabling identification and exploitation of vulnerabilities in this context.</li>
+        <li>Ability to intercept and manipulate data traffic between IoT devices and servers, enabling spoofing, session hijacking, and man-in-the-middle attacks.</li>
+        <li>Experience in denial of service (DDoS) attacks targeted at IoT devices and control servers, aiming to disrupt critical operations or cause damage.</li>
+    </ul>
+
+    </div>
+
     </div>
 
     <div class="content">
-        <h2>Courses</h2>
+        <h1>My 25 Favorite Courses I've Taken</h1>
         <ul>
-            <li>Advanced Big Data and Data Mining</li>
+            <li>Desenvolvendo Projetos na Linguagem C++</li>
+            <li>Frontend Development with Rust, Rocket and Leptos Framework</li>
+            <li>Implementando Validações de Testes Unitários com C#</li>
+            <li>Algoritmos Genéticos</li>
+            <li>Métodos de Machine Learning Bioinspirados</li>
+            <li>Otimizando o Sistema Bancário com Funções Python</li>
+            <li>Python para Machine Learning na Prática</li>
             <li>Advanced Python</li>
+            <li>Green Software Development - English</li>
+            <li>Refresher of the necessary Rust knowledge for web development</li>
+            <li>Rust Full Stack Development</li>
+            <li>Explorando Banco de Dados Relacionais com Python DB API</li>
+            <li>Advanced Big Data and Data Mining</li>
+            <li>Big Data Avançado e Mineração de Dados</li>
+            <li>Database modelling and Backend Development with Rust and Rocket Framework</li>
+            <li>Conceitos e Práticas de Sistemas Operacionais e Máquinas Virtuais</li>
+            <li>Implementing Azure OpenAI Service Fundamentals</li>
+            <li>Protocolos de Comunicação para IoT</li>
+            <li>Modelos de Inteligência Artificial para IoT</li>
             <li>AWS Cloud Certification for IoT</li>
-            <li>Database Normalization</li>
-            <li>Fundamentals of Cybersecurity</li>
-            <li>Principles of Cybersecurity</li>
-            <li>Understanding Client-Server Communication</li>
-            <li>Introduction to Specialized Machine Learning Training</li>
-            <li>Supplementary Materials: Pentesting and Vulnerability Search</li>
             <li>Introduction to Google Cloud Platform</li>
-            <li>Artificial Intelligence Models for IoT</li>
+            <li>Understanding Client-Server Communication</li>
+            <li>Testes Unitários com C#</li>
+            <li>Python Avançado</li>
         </ul>
     </div>
-
-    <footer>
-        <p>*****************************************</p>
-        <p>&copy; 2024 Lu4nn P3r3ir4 M3nd3s.</p>
-        <p>Contact: luannpmendes@gmail.com</p>
-        <p>*****************************************</p>
-    </footer>
-
+    
     <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-
+    
     <script>
         function toggleTheme() {
             document.body.classList.toggle("dark-theme");
@@ -193,4 +234,36 @@
     </script>
 </body>
 
-</html>
+<div class="center">
+    <pre>
+        .                                                      .
+      .n                   .                 .                  n.
+.   .dP                  dP                   9b                 9b.    .
+4    qXb         .       dX                     Xb       .        dXp     t
+dX.    9Xb      .dXb    __                         __    dXb.     dXP     .Xb
+9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
+9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
+`9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
+  `9XXXXXXXXXXXP' `9XX'   DIE    `98v8P'  HUMAN   `XXP' `9XXXXXXXXXXXP'
+      ~~~~~~~       9X.          .db|db.          .XP       ~~~~~~~
+                      )b.  .dbo.dP'`v'`9b.odb.  .dX(
+                    ,dXXXXXXXXXXXb     dXXXXXXXXXXXb.
+                   dXXXXXXXXXXXP'   .   `9XXXXXXXXXXXb
+                  dXXXXXXXXXXXXb   d|b   dXXXXXXXXXXXXb
+                  9XXb'   `XXXXXb.dX|Xb.dXXXXX'   `dXXP
+                   `'      9XXXXXX(   )XXXXXXP      `'
+                            XXXX X.`v'.X XXXX
+                            XP^X'`b   d'`X^XX
+                            X. 9  `   '  P )X
+                            `b  `       '  d'
+                             `             '
+</pre>
+
+</div>
+                <footer>
+                    <p>*****************************************</p>
+                    <p>&copy; 2024 Lu4nn P3r3ir4 M3nd3s.</p>
+                    <p>Contact: luannpmendes@gmail.com</p>
+                    <p>*****************************************</p>
+                </footer>
+  </div>
